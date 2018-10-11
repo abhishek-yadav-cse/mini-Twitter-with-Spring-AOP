@@ -7,6 +7,7 @@ Oriented Programming (AOP).
 
 The tweet service is defined as follows:
 
+
 `
 import java.io.IOException;
 public interface TweetService {
@@ -27,6 +28,7 @@ void follow(String follower, String followee) throws IOException;
 void block(String user, String followee) throws IOException;
 }
 `
+
 
 Since network failure happens relatively frequently, add the feature to
 automatically retry for up to three times for a network failure (indicated by an IOException).
