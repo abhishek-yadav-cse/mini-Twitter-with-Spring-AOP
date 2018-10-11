@@ -8,12 +8,13 @@ Oriented Programming (AOP).
 The tweet service is defined as follows:
 
 
-`
+<pre>
 import java.io.IOException;
 public interface TweetService {
 /**
 * @throws IllegalArgumentException if the message is more than 140 characters as
 measured by string length.
+
 * @throws IOException if there is a network failure
 */
 void tweet(String user, String message) throws IllegalArgumentException, IOException;
@@ -27,7 +28,7 @@ void follow(String follower, String followee) throws IOException;
 */
 void block(String user, String followee) throws IOException;
 }
-`
+</pre>
 
 
 Since network failure happens relatively frequently, add the feature to
@@ -36,7 +37,7 @@ automatically retry for up to three times for a network failure (indicated by an
 
 Implement the following TweetStats service:
 
-`
+<pre>
 public interface TweetStats {
 /**
 * reset all the measurements and all the following/blocking relationship as well.
@@ -79,7 +80,7 @@ String getMostProductiveUser();
 */
 String getMostBlockedFollower();
 }
-`
+</pre>
 
 Implementation of the two concerns need to be done in the two files: RetryAspect.java and
 StatsAspect.java
