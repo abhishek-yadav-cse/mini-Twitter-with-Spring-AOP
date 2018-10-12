@@ -39,17 +39,22 @@ Implement the following TweetStats service:
 
 <pre>
 public interface TweetStats {
+
 /**
 * reset all the measurements and all the following/blocking relationship as well.
 */
 void resetStatsandSystem();
 /**
+
+
 * @return the length of longest message successfully sent or attempted since the beginning
 or last reset. Can be more than 140. If no messages succeeded or attempted , return 0.
 * Failed messages are counted for this as well.
 */
 int getLengthOfLongestTweet();
 /**
+
+
 * @return the user who has been followed by the biggest number of different users since the
 beginning or last reset. If there is a tie,
 * return the 1st of such users based on alphabetical order. If the follow action did not
@@ -58,6 +63,8 @@ Blocking or not does not affect this metric.
 */
 String getMostFollowedUser();
 /**
+
+
 * @return the message that has been shared with the biggest number of different followers
 when it is successfully tweaked. If the same message (based on string equality) has been
 tweeted more than once, it is considered as different message for this purpose. Return based
@@ -65,6 +72,8 @@ on dictionary order if there is a tie.
 */
 String getMostPopularMessage();
 /**
+
+
 * The most productive user is determined by the total length of all the messages successfully
 tweeted since the beginning
 * or last reset. If there is a tie, return the 1st of such users based on alphabetical order. If no
@@ -73,6 +82,8 @@ users successfully tweeted, return null.
 */
 String getMostProductiveUser();
 /**
+
+
 * @return the user who has been successfully blocked by the biggest number of
 * different users since the beginning or last reset. If there is a
 * tie, return the 1st of such users based on alphabetical order.
