@@ -69,7 +69,7 @@ String getMostFollowedUser();
 
 
 * @return the message that has been shared with the biggest number of different followers
-when it is successfully tweaked. If the same message (based on string equality) has been
+when it is successfully tweeted. If the same message (based on string equality) has been
 tweeted more than once, it is considered as different message for this purpose. Return based
 on dictionary order if there is a tie.
 */
@@ -102,6 +102,6 @@ Not need to worry about multi-threading; i.e., you can assume invocations on the
 service and stats service will come from only one thread.
 W.r.t. follow and block , the two actions do not directly interfere with each other, i.e., Alice can
 block Bob, and after that Bob can still successfully follow Alice, as far the success of service
-invocations are considered. The end effect, however, is that when Alice sends a tweek, Bob
+invocations are considered. The end effect, however, is that when Alice sends a tweet, Bob
 cannot receive it, since he has been blocked. Both follow and block get cleared upon system
 reset.
